@@ -1,0 +1,45 @@
+<ion-view title="{{name}}" id="page8" class=" ">
+    <ion-content padding="true" class="has-header">
+      <ion-list >
+        <ion-item id="">
+          <!--button id="SerialN" class=" button button-balanced  button-block "-->
+            <div style="float:left"><h4>
+              <strong >BA Code:</strong>&nbsp{{BAC}}</h4>
+            </div>
+            <br/>
+            <div style="float:left"><h4>
+              <strong>Serial:</strong>&nbsp{{SNO}}</h4>
+            </div>
+          <br/>
+          <div style="float:left"><h4>
+            <strong >Machine Key:</strong>&nbsp{{MKEY}}</h4>
+          </div>
+                <br/>
+          <div style="float:left"><h4>
+            <strong>Remarks:</strong>&nbsp{{REM}}</h4>
+          </div>
+          <br/> <p></p>
+
+        </ion-item>
+      </ion-list>
+      <ion-list ng-class="{current: selected == $index }" class="list" ng-repeat="x in data.data" ng-click="click(x.LicenseKeyId,x.FeatureId,$index)">
+        <ion-item class="">
+          <h2dark>
+            <div class="balanced" style="align:center">{{get(x.FeatureId)}}
+            </div>
+
+          <div style="float:left">     <h4>
+              <strong>Expiry Date:</strong>&nbsp{{x.ExpiryDate}}</h4>
+            </div>
+
+          <div style="float:right">  <h4>
+              <strong>Count:</strong>&nbsp{{x.Count}}</h4>
+            </div>
+            <br/><h5>
+              Date Added On: &nbsp{{x.dates}}
+            </h5>
+          </h2dark>
+        </ion-item>
+</ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view title="Customer List" id="page5" class=" ">
+  <ion-content padding="true" class="has-header">
+
+    <div>
+
+      <label class="item item-input" name="Search License">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" class="button-outline button-balanced  button-block" placeholder="Search.." ng-model="search">
+      </label>
+
+      <ul>
+        <ion-list  class="list" ng-repeat="x in comp.data | filter:search" ui-sref='side-menu21.companyDetails({companyId:x.SerialNumber})'>
+          <ion-item class=""  >
+            <h2dark>
+              <div class="balanced" style="align:center">{{x.CustomerName}}
+              </div>
+
+              <div style="float:left"><h3>
+                <strong >BA Code:</strong>&nbsp{{x.BACode}}</h3>
+              </div>
+              <div style="float:right"><h3>
+                <strong>Serial:</strong>&nbsp{{x.SerialNumber}}</h3>
+              </div>
+
+            </h2dark>
+          </ion-item>
+        </ion-list>
+        <!--ion-infinite-scroll on-infinite="loadMore()" distance="1%"></ion-infinite-scroll-->
+      </ion-content>
+    </ul>
+
+  </div>
+
+</ion-content>
+</ion-view>

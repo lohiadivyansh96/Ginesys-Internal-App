@@ -1,0 +1,56 @@
+<ion-view style="align:center" title="Customer Keys" id="page6" class=" " align="center">
+
+  <ion-content padding="true" class="">
+    <ion-list >
+      <ion-item id="">
+        <!--button id="SerialN" class=" button button-balanced  button-block "-->
+        <button id="FeatureN" class=" button button-outline button-balanced  button-block ">
+           {{name}}
+        </button>
+        <div style="float:left"><h4>
+            <strong >BA Code:</strong>&nbsp{{BAC}}</h4>
+          </div>
+          <br/>
+            <div style="float:left"><h4>
+           <strong>Serial:</strong>&nbsp{{SNO}}
+         </div>
+
+
+
+
+             </ion-item>
+           </ion-list>
+
+
+      <label class="item item-input" name="Search License">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Search.." ng-model="search">
+      </label>
+
+      <ul>
+        <ion-list class="list" ng-repeat="x in data.data | filter:search" ui-sref='side-menu21.licenseKeyFeature({keyId:x.Id})'>
+          <ion-item class="" >
+
+            <div style="float:left">
+               <h4><strong >Machine Key:</strong>&nbsp{{x.MachineKey}}</h4>
+             </div>
+
+            <br/>
+          <div style="float:left">
+             <h4><strong>Remarks:</strong>&nbsp{{x.Remarks}}<h5>
+             </div>
+             <br/>
+             <div style="float:left">
+                <h4><strong>Active:</strong>&nbsp{{x.IsActive}}<h5>
+                </div>
+
+          </ion-item>
+        </ion-list>
+
+      </ion-content>
+    </ul>
+
+  </div>
+
+</ion-content>
+</ion-view>

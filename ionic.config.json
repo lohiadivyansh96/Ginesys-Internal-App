@@ -1,0 +1,12 @@
+{
+  "name": "Ginesys",
+  "app_id": "0934cf55",
+  "integrations": {},
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

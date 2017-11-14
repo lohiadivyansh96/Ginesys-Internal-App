@@ -1,0 +1,63 @@
+<ion-view title="Feature History" id="page10" class=" ">
+  <ion-content padding="true" class="has-header">
+
+    <ion-list>
+      <ion-item id="">
+        <div style="float:left"><h4>
+          <strong >Company:</strong>&nbsp{{name}}</h4>
+        </div>
+          <br/>
+        <div style="float:left"><h4>
+          <strong >BA Code:</strong>&nbsp{{BAC}}</h4>
+        </div>
+        <br/>
+        <div style="float:left"><h4>
+          <strong>Serial:</strong>&nbsp{{SNO}}</h4>
+        </div>
+      <br/>
+      <div style="float:left"><h4>
+        <strong >Machine Key:</strong>&nbsp{{MKEY}}</h4>
+      </div>
+            <br/>
+      <div style="float:left"><h4>
+        Remarks: &nbsp{{REM}}</h4>
+      </div>
+      <br/> <p></p>
+        <button id="FeatureN" class=" button button-outline button-balanced  button-block ">{{FEATNAME}}</button>
+
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="list" ng-repeat="x in data.data">
+      <ion-item class="">
+        <h2dark>
+          <div class="" style="float:left">
+            <h4>
+              <strong>Expiry Date:</strong>
+              &nbsp{{x.ExpiryDate}}</h4>
+          </div>
+          <div class="" style="float:right">
+            <h4>
+              <strong>Count:</strong>
+              &nbsp{{x.Count}}</h4>
+          </div>
+
+          <div></br>
+            <p>
+              <div class="" style="float:left">
+
+            <h5>
+              <strong>Updated On:</strong>&nbsp{{x.GeneratedOn}}</h5>
+            </div>
+                <div class="" style="float:right">
+                  <h5>
+                    <strong>Updated By:</strong>&nbsp{{x.UserName}}</h5>
+                  </div>
+          </p>
+        </div>
+
+      </h2dark>
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-view>
